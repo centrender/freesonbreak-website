@@ -49,6 +49,37 @@
             width: 140px;
             margin: 5px;
         }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 8px;
+            font-size: 18px;
+            color: #333;
+        }
+        input {
+            margin-bottom: 16px;
+            padding: 8px;
+            font-size: 16px;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -61,7 +92,11 @@
         <h2>Coming Soon!</h2>
         <p>Join the waitlist to be the first to experience FreesonBreak™.</p>
 
-        <a href="#" class="cta">Sign Up for Early Access</a>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <label for="email">Join the Waitlist</label>
+            <input type="email" name="email" id="email" required>
+            <button type="submit">Submit</button>
+        </form>
 
         <p><strong>Available Soon On:</strong></p>
         <div class="store-badges">
