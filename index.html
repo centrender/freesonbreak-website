@@ -49,10 +49,12 @@
             width: 140px;
             margin: 5px;
         }
+        /* Waitlist Form Styling */
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: 20px;
         }
         label {
             margin-bottom: 8px;
@@ -61,7 +63,7 @@
         }
         input {
             margin-bottom: 16px;
-            padding: 8px;
+            padding: 10px;
             font-size: 16px;
             width: 100%;
             max-width: 300px;
@@ -69,7 +71,7 @@
             border-radius: 4px;
         }
         button {
-            padding: 10px 20px;
+            padding: 12px 20px;
             font-size: 16px;
             background-color: #007bff;
             color: white;
@@ -92,9 +94,10 @@
         <h2>Coming Soon!</h2>
         <p>Join the waitlist to be the first to experience FreesonBreak™.</p>
 
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <!-- Email Collection Form -->
+        <form name="waitlist" method="POST" netlify>
             <label for="email">Join the Waitlist</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required>
             <button type="submit">Submit</button>
         </form>
 
