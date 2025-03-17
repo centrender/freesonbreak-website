@@ -95,11 +95,15 @@
         <p>Join the waitlist to be the first to experience FreesonBreak™.</p>
 
         <!-- Email Collection Form -->
-        <form name="waitlist" method="POST" netlify>
-            <label for="email">Join the Waitlist</label>
-            <input type="email" name="email" id="email" placeholder="Enter your email" required>
-            <button type="submit">Submit</button>
-        </form>
+<form name="waitlist" method="POST" netlify netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="waitlist">
+    <p hidden>
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+    </p>
+    <label for="email">Join the Waitlist</label>
+    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+    <button type="submit">Submit</button>
+</form>
 
         <p><strong>Available Soon On:</strong></p>
         <div class="store-badges">
