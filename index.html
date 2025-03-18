@@ -49,7 +49,6 @@
             width: 140px;
             margin: 5px;
         }
-        /* Waitlist Form Styling */
         form {
             display: flex;
             flex-direction: column;
@@ -63,7 +62,7 @@
         }
         input {
             margin-bottom: 16px;
-            padding: 10px;
+            padding: 8px;
             font-size: 16px;
             width: 100%;
             max-width: 300px;
@@ -71,7 +70,7 @@
             border-radius: 4px;
         }
         button {
-            padding: 12px 20px;
+            padding: 10px 20px;
             font-size: 16px;
             background-color: #007bff;
             color: white;
@@ -94,16 +93,12 @@
         <h2>Coming Soon!</h2>
         <p>Join the waitlist to be the first to experience FreesonBreak™.</p>
 
-        <!-- Email Collection Form -->
-<form name="waitlist" method="POST" netlify netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="waitlist">
-    <p hidden>
-        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-    </p>
-    <label for="email">Join the Waitlist</label>
-    <input type="email" name="email" id="email" placeholder="Enter your email" required>
-    <button type="submit">Submit</button>
-</form>
+        <!-- Netlify Form for Email Collection -->
+        <form name="waitlist" method="POST" data-netlify="true">
+            <label for="email">Join the Waitlist</label>
+            <input type="email" name="email" id="email" required>
+            <button type="submit">Submit</button>
+        </form>
 
         <p><strong>Available Soon On:</strong></p>
         <div class="store-badges">
